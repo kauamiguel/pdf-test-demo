@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Course PDF - Server-side POC</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Cover page (similar to PdfCover) -->
+  <div class="page cover-page">
+    <div class="cover-container">
+      <div class="cover-hero">
+        <!-- Optional: logo area -->
+        <div class="cover-logo">
+          <span class="logo-placeholder">[Logo]</span>
+        </div>
+        <div class="cover-text">
+          <h1 class="cover-title">Introdução ao Desenvolvimento Web</h1>
+          <p class="cover-description">
+            Este curso aborda os fundamentos de HTML, CSS e JavaScript para construção de páginas e aplicações web modernas.
+          </p>
+        </div>
+      </div>
+      <div class="cover-toc">
+        <div class="toc-unit">
+          <div class="toc-unit-title">Módulo 1: Fundamentos</div>
+          <div class="toc-topic">HTML e estrutura de páginas</div>
+          <div class="toc-topic">CSS e estilização</div>
+          <div class="toc-topic">Introdução ao JavaScript</div>
+        </div>
+        <div class="toc-unit">
+          <div class="toc-unit-title">Módulo 2: Prática</div>
+          <div class="toc-topic">Projeto: landing page</div>
+          <div class="toc-topic">Formulários e validação</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Topic page 1 (similar to Page + PdfTopicHeader + PdfTopicBody) -->
+  <div class="page topic-page">
+    <header class="topic-header">
+      <h2 class="topic-header-title">HTML e estrutura de páginas</h2>
+    </header>
+    <div class="topic-body">
+      <p>
+        HTML (HyperText Markup Language) é a linguagem de marcação usada para estruturar conteúdo na web.
+        Cada elemento HTML descreve um tipo de conteúdo, como títulos, parágrafos, listas e links.
+      </p>
+      <h3>Principais elementos</h3>
+      <ul>
+        <li><strong>&lt;h1&gt; a &lt;h6&gt;</strong> — títulos e subtítulos</li>
+        <li><strong>&lt;p&gt;</strong> — parágrafos de texto</li>
+        <li><strong>&lt;ul&gt; / &lt;ol&gt;</strong> — listas não ordenadas e ordenadas</li>
+        <li><strong>&lt;a&gt;</strong> — links para outras páginas ou recursos</li>
+      </ul>
+      <h3>Exemplo de tabela</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Tag</th>
+              <th>Uso</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>&lt;div&gt;</code></td>
+              <td>Container genérico em bloco</td>
+            </tr>
+            <tr>
+              <td><code>&lt;span&gt;</code></td>
+              <td>Container genérico em linha</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="block-button" data-type="button">
+        <span class="button-label">Acessar documentação MDN</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Topic page 2 -->
+  <div class="page topic-page">
+    <header class="topic-header">
+      <h2 class="topic-header-title">CSS e estilização</h2>
+    </header>
+    <div class="topic-body">
+      <p>
+        CSS (Cascading Style Sheets) controla a apresentação visual do HTML: cores, fontes, layout e responsividade.
+      </p>
+      <h3>Conceitos importantes</h3>
+      <ol>
+        <li>Seletores — como escolher quais elementos estilizar</li>
+        <li>Especificidade — ordem de prioridade das regras</li>
+        <li>Box model — conteúdo, padding, border e margin</li>
+      </ol>
+      <p>
+        Para gerar PDFs no servidor, podemos usar bibliotecas como WeasyPrint (Python), que interpreta HTML e CSS e produz PDF de alta qualidade.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

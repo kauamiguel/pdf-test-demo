@@ -1,0 +1,220 @@
+/* PDF POC – styles similar to pdf-preview (cover, topic header, topic body) */
+
+:root {
+  --primary: #494ED1;
+  --text-primary: #2D2F36;
+  --gray-50: #F0F1F2;
+  --gray-100: #D1D3D8;
+  --font-title: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+/* Page break for print/PDF */
+.page {
+  page-break-after: always;
+  min-height: 100vh;
+}
+
+.page:last-child {
+  page-break-after: auto;
+}
+
+/* ----- Cover page (PdfCover) ----- */
+.cover-page {
+  background: #fff;
+  padding: 20px 40px 40px;
+}
+
+.cover-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cover-hero {
+  background-color: var(--primary);
+  color: #fff;
+  min-height: 28rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.cover-logo {
+  margin-bottom: 1.5rem;
+  height: 36px;
+}
+
+.logo-placeholder {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.cover-text {
+  width: 80%;
+  text-align: center;
+}
+
+.cover-title {
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+}
+
+.cover-description {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.95;
+}
+
+.cover-toc {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.toc-unit {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.toc-unit-title {
+  font-family: var(--font-title);
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  min-height: 3.5rem;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--gray-50);
+  border-radius: 6px;
+}
+
+.toc-topic {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 1rem 1.75rem;
+  min-height: 3.5rem;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--gray-50);
+  border-radius: 6px;
+  color: var(--text-primary);
+}
+
+/* ----- Topic page (PdfTopicHeader + PdfTopicBody) ----- */
+.topic-page {
+  padding: 20px 0 40px;
+}
+
+.topic-header {
+  background-color: var(--gray-100);
+  padding: 1rem 2rem;
+  margin-bottom: 0;
+}
+
+.topic-header-title {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.topic-body {
+  padding: 1rem 2rem 2rem;
+  color: var(--text-primary);
+}
+
+.topic-body p {
+  margin: 0 0 1rem;
+}
+
+.topic-body h3 {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 14px;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.topic-body ul,
+.topic-body ol {
+  margin: 0 0 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.topic-body li {
+  margin-bottom: 0.25rem;
+}
+
+.topic-body code {
+  background: var(--gray-50);
+  padding: 0.125rem 0.375rem;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+/* Table (PdfTable) */
+.table-wrapper {
+  margin: 1rem 0 1.5rem;
+  overflow: auto;
+}
+
+.topic-body table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.topic-body th,
+.topic-body td {
+  border: 1px solid #9ca0aa;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.topic-body th {
+  background-color: var(--gray-100);
+  font-weight: 700;
+  font-family: var(--font-title);
+}
+
+/* Button block (PdfButton-like) */
+.block-button {
+  display: inline-block;
+  background-color: var(--primary);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  margin-top: 0.5rem;
+}
+
+.button-label {
+  font-weight: 500;
+}
