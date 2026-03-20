@@ -81,6 +81,19 @@
       <div class="block-button" data-type="button">
         <span class="button-label">Acessar documentação MDN</span>
       </div>
+
+      <!-- Objective question (PdfObjectiveQuestion) -->
+      <div class="block objective-question" data-type="objective-question">
+        <div class="objective-question-inner">
+          <div class="objective-question-title">Qual tag HTML é usada para definir um parágrafo?</div>
+          <div class="objective-question-alternatives">
+            <div class="objective-question-option"><span class="objective-question-bullet"></span> &lt;paragraph&gt;</div>
+            <div class="objective-question-option"><span class="objective-question-bullet"></span> &lt;p&gt;</div>
+            <div class="objective-question-option"><span class="objective-question-bullet"></span> &lt;text&gt;</div>
+            <div class="objective-question-option"><span class="objective-question-bullet"></span> &lt;para&gt;</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -93,15 +106,64 @@
       <p>
         CSS (Cascading Style Sheets) controla a apresentação visual do HTML: cores, fontes, layout e responsividade.
       </p>
-      <h3>Conceitos importantes</h3>
-      <ol>
-        <li>Seletores — como escolher quais elementos estilizar</li>
-        <li>Especificidade — ordem de prioridade das regras</li>
-        <li>Box model — conteúdo, padding, border e margin</li>
-      </ol>
+
+      <!-- Accordion (PdfAccordion) -->
+      <div class="block accordion-block" data-type="accordion">
+        <div class="accordion-item">
+          <div class="accordion-trigger">O que é um seletor CSS?</div>
+          <div class="accordion-content">Um seletor define quais elementos HTML serão estilizados. Exemplos: por tag (<code>p</code>), por classe (<code>.destaque</code>), por id (<code>#header</code>).</div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-trigger">O que é especificidade?</div>
+          <div class="accordion-content">A especificidade determina qual regra CSS prevalece quando várias se aplicam ao mesmo elemento. IDs têm prioridade sobre classes, que têm prioridade sobre seletores de tag.</div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-trigger">O que é o box model?</div>
+          <div class="accordion-content">O box model descreve como cada elemento é composto: conteúdo, padding, borda e margin. O tamanho total do elemento soma esses valores conforme o <code>box-sizing</code>.</div>
+        </div>
+      </div>
+
       <p>
         Para gerar PDFs no servidor, podemos usar bibliotecas como WeasyPrint (Python), que interpreta HTML e CSS e produz PDF de alta qualidade.
       </p>
+    </div>
+  </div>
+
+  <!-- Topic page 3 – Flash cards (PdfFlashCard) -->
+  <div class="page topic-page">
+    <header class="topic-header">
+      <h2 class="topic-header-title">Resumo: conceitos-chave</h2>
+    </header>
+    <div class="topic-body">
+      <p>Revise os termos principais com estes cartões:</p>
+
+      <!-- Flash cards (FlashCard) -->
+      <div class="block flash-cards-block" data-type="flash-card">
+        <div class="flash-card-row">
+          <div class="flash-card-side flash-card-front" style="--card-color: #EEEEFD; --card-text: #23275B;">
+            <span class="flash-card-text">HTML</span>
+          </div>
+          <div class="flash-card-side flash-card-back" style="--card-color: #E9EAF0; --card-text: #2D2F36;">
+            <span class="flash-card-text">Linguagem de marcação para estrutura e conteúdo de páginas web.</span>
+          </div>
+        </div>
+        <div class="flash-card-row">
+          <div class="flash-card-side flash-card-front" style="--card-color: #FDF0E6; --card-text: #642D00;">
+            <span class="flash-card-text">CSS</span>
+          </div>
+          <div class="flash-card-side flash-card-back" style="--card-color: #E9EAF0; --card-text: #2D2F36;">
+            <span class="flash-card-text">Controla apresentação: layout, cores, fontes e responsividade.</span>
+          </div>
+        </div>
+        <div class="flash-card-row">
+          <div class="flash-card-side flash-card-front" style="--card-color: #F1F8EA; --card-text: #314F11;">
+            <span class="flash-card-text">JavaScript</span>
+          </div>
+          <div class="flash-card-side flash-card-back" style="--card-color: #E9EAF0; --card-text: #2D2F36;">
+            <span class="flash-card-text">Linguagem de programação para interatividade no navegador.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </body>

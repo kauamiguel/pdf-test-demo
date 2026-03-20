@@ -1,0 +1,12 @@
+# Gotenberg 8 – Chromium-based HTML → PDF API
+# Run from this directory: docker compose up -d
+# API: http://localhost:3049 (mapped to container :3000; change if busy)
+
+services:
+  gotenberg:
+    image: gotenberg/gotenberg:8
+    # Host port avoids clashing with Next (3000) and other locals.
+    ports:
+      - "3049:3000"
+    # Increase if large documents fail (default is often enough for POC)
+    mem_limit: 1g
